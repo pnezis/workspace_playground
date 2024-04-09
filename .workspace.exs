@@ -8,6 +8,10 @@
   # enforce things like common build dirs or required project depenendencies. For
   # more details chech the `Workspace.Check` documentation.
   checks: [
+    [
+      module: Workspace.Checks.WorkspaceDepsPaths,
+      description: "validate workspace relative path dependencies"
+    ],
   ],
 
   # Test coverage settings on the workspace level.
