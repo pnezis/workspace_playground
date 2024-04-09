@@ -4,6 +4,7 @@ defmodule EctoUtils.MixProject do
   def project do
     [
       app: :ecto_utils,
+      description: "ecto helper utils",
       version: "0.1.0",
       elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
@@ -20,6 +21,8 @@ defmodule EctoUtils.MixProject do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
-    []
+    [
+      {:poison, "~> 5.0"}
+    ]
   end
 end

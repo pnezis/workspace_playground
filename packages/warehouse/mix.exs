@@ -4,6 +4,7 @@ defmodule Warehouse.MixProject do
   def project do
     [
       app: :warehouse,
+      description: "the data layer",
       version: "0.1.0",
       elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,

@@ -4,6 +4,7 @@ defmodule CliTools.MixProject do
   def project do
     [
       app: :cli_tools,
+      description: "cli tools",
       version: "0.1.0",
       elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
