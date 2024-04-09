@@ -21,7 +21,7 @@ defmodule BackOffice.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:cli_options, path: "../../packages/cli_options"}
+      {:cli_tools, path: "../../packages/cli_tools"}
     ]
   end
 end

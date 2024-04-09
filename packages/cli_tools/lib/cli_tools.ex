@@ -1,6 +1,6 @@
-defmodule CliOptions do
+defmodule CliTools do
   @moduledoc """
-  Documentation for `CliOptions`.
+  Documentation for `CliTools`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule CliOptions do
 
   ## Examples
 
-      iex> CliOptions.hello()
+      iex> CliTools.hello()
       :world
 
   """

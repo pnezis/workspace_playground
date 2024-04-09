@@ -22,7 +22,7 @@ defmodule Api.MixProject do
   defp deps do
     [
       {:accounts, path: "../../packages/accounts"},
-      {:cli_options, path: "../../packages/cli_options"},
+      {:cli_tools, path: "../../packages/cli_tools"},
       {:orders, path: "../../packages/orders"}
     ]
   end

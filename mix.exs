@@ -27,8 +27,8 @@ defmodule WorkspaceDemos.MixWorkspace do
     defp deps do
       [
         # TODO: set proper versions once released
-        {:workspace, github: "pnezis/workspace", sparse: "workspace"},
-        {:cli_options, github: "pnezis/workspace", sparse: "cli_options", override: true}
+        {:workspace, path: "../workspace/workspace"},
+        {:cli_options, path: "../workspace/cli_options", override: true}
       ]
     end
   end
