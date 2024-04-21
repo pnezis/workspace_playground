@@ -37,7 +37,9 @@
       description: "strict external dependencies",
       opts: [
         deps: [
-          {:ex_doc, "== 0.28.3", no_options_check: true}
+          ex_doc: [
+            version: "== 0.28.3"
+          ]
         ]
       ]
     ]
