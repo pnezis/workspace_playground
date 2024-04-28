@@ -24,3 +24,5 @@ workspace_demos-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+demo*
