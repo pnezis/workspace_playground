@@ -42,6 +42,58 @@
           ]
         ]
       ]
+    ],
+    # Tags related checks
+    [
+      module: Workspace.Checks.ValidateTags,
+      description: "all projects must have valid tags",
+      opts: [
+        allowed: [
+          {:scope, :shared},
+          {:scope, :app},
+          {:scope, :data},
+          {:scope, :domain}
+        ]
+      ]
+    ],
+    [
+      module: Workspace.Checks.RequiredScopeTag,
+      description: "all projects must have a {:scope, value} tag set",
+      opts: [
+        scope: :scope
+      ]
+    ],
+    [
+      module: Workspace.Checks.EnforceBoundaries,
+      description: "scope:shared layer can only depend on scope:shared",
+      opts: [
+        tag: {:scope, :shared},
+        allowed_tags: [{:scope, :shared}]
+      ]
+    ],
+    [
+      module: Workspace.Checks.EnforceBoundaries,
+      description: "scope:data layer can only depend on scope:shared",
+      opts: [
+        tag: {:scope, :data},
+        allowed_tags: [{:scope, :shared}]
+      ]
+    ],
+    [
+      module: Workspace.Checks.EnforceBoundaries,
+      description: "scope:domain layer can only depend on scope:data",
+      opts: [
+        tag: {:scope, :domain},
+        allowed_tags: [{:scope, :data}]
+      ]
+    ],
+    [
+      module: Workspace.Checks.EnforceBoundaries,
+      description: "scope:app layer can only depend on downstream packages",
+      opts: [
+        tag: {:scope, :app},
+        allowed_tags: [{:scope, :data}, {:scope, :shared}]
+      ]
     ]
   ],
 
